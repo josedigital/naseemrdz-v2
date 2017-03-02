@@ -1,0 +1,48 @@
+.Navigation-trigger
+  left: 0
+  padding: 0 2em
+  position: fixed
+  right: 0
+  top: 0
+  transition: background .5s
+  z-index: 10
+
+  &.is-scrolling
+    background-color: $light
+
+  .Cell
+    text-align: right
+    +above($medium)
+      text-align: center
+
+  &__button
+    background: transparent
+    border: none
+    cursor: pointer
+    font-size: responsive 12px 12px
+    padding: 0 0 2em 0
+    position: relative
+    
+    &:before, &:after
+      background-color: $brown
+      content: ''
+      display: block
+      height: 5px
+      left: 0
+      position: absolute
+      transition: all .5s
+      top: 25px
+      width: 100%
+    &:after
+      top: 35px
+    
+    &.is-visible
+      color: $orange
+      &:before, &:after
+        background-color: $orange
+        height: 2px
+      &:before
+        top: 35px
+        transform: rotate(45deg)
+      &:after
+        transform: rotate(-45deg)

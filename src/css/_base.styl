@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Varela+Round')
+
+html
+  font-size: responsive
+  min-font-size: 14px
+  max-font-size: 16px
+  letter-spacing: .1px
+  line-height: 1.8
+body
+  background-color: $main-background
+  color: $brown
+  font-family: 'Varela Round', sans-serif
+  +above($medium)
+    overflow: hidden
+
+//- Typography 
+
+h1, h2, h3, h4, h5, h6
+  letter-spacing: 1.95px
+  margin-top: 0
+  margin-bottom: $space
+  line-height: $line-height-heading
+
+h1, .h1
+  font-size: responsive
+  min-font-size: $font-h2
+  max-font-size: $font-h1
+h2, .h2
+  font-size: responsive
+  min-font-size: $font-h3
+  max-font-size: $font-h2
+h3, .h3
+  font-size: responsive
+  min-font-size: $font-h4
+  max-font-size: $font-h3
+h4, .h4
+  font-size: responsive
+  min-font-size: $font-h5
+  max-font-size: $font-h4
+h5, .h5
+  font-size: responsive
+  min-font-size: $font-h6
+  max-font-size: $font-h5
+h6, .h6
+  font-size: responsive
+  min-font-size: $font-h6
+  max-font-size: $font-h6
+
+.serif
+  font-family: $serif
+.sans-serif
+  font-family: $sans-serif
+
+//- Links
+a,
+a:visited
+  color: $link-color
+  text-decoration: none
+  transition: color .2s ease-in
+a:hover
+  color: $link-hover
+
+
+//- Images
+img
+  max-width: 100%

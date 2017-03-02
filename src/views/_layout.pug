@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title Alex Rodriguez &bull; UI Designer and Javascript Developer
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description' content="Alex Rodriguez, Austin-based UI Designer, Javascript & Front End Developer")
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", type="text/css", href="css/style.css")
+    link(href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Varela+Round" rel="stylesheet")
+
+  body
+
+    //- button.Stackednav__button.hide-desktop
+    //-   .Stackednav__trigger.js-nav-trigger
+    //-     .Stackednav__bar
+    //-     .Stackednav__bar
+    //-     .Stackednav__bar
+
+    .Grid.Navigation.is-home.text-center
+      .Cell.six
+        .Grid.center
+          .Cell
+            a(href="#/").uppercase.home Home
+          .Cell
+            a(href="#/work").uppercase Work
+          //- .Cell
+          //-   a(href="#/projects").uppercase Projects
+          .Cell
+            a(href="#/contact").uppercase Contact
+
+    block home
+
+    .Grid.Navigation__secondary.bottom.right
+      .Cell.six.text-center
+        p Selected Work
+        a(href="#/work/panda-app") Panda App
+        a(href="#/work/koala-app") Koala App
+        a(href="#/work/mixtagon") The Mixtagon
+        a(href="#/work/laredo-examiners") Laredo Examiners
+        a(href="#/work/nrdz") Noreen Naseem Rodriguez
+        
+        
+        
+
+    script(src="js/main.js")

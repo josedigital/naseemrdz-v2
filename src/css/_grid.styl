@@ -1,0 +1,96 @@
+grid()
+  display: flex
+  flex-wrap: wrap
+  position: relative
+
+cell()
+  box-sizing: border-box
+  flex-shrink: 0
+  position: relative
+
+.container
+  margin: 0 auto
+  width: 95%
+  +above($medium)
+    max-width: 1200px
+
+
+
+.Grid
+  grid()
+  +below($medium)
+    flex-direction: column
+&.Grid__column
+  flex-direction: column
+&.Grid__row
+  +below($medium)
+    flex-direction: row
+  
+
+.Grid
+  &.top
+    align-items: flex-start
+  &.middle
+    align-items: center
+  &.bottom
+    align-items: flex-end
+  &.stretch
+    align-items: stretch
+  &.baseline
+    align-items: baseline
+  &.left
+    justify-content: flex-start
+  &.center
+    justify-content: center
+  &.right
+    justify-content: flex-end
+  &.between
+    justify-content: space-between
+  &.around
+    justify-content: space-around
+
+.Cell
+  padding: 1em
+  position: relative
++above($medium)
+  .Cell
+    cell()
+  .fill
+    width: 0 
+    min-width: 0 
+    flex-grow: 1
+  .one
+    width: calc(100% * 1 / 12)
+  .two
+    width: calc(100% * 2 / 12)
+  .three
+    width: calc(100% * 3 / 12)
+  .four
+    width: calc(100% * 4 / 12)
+  .five
+    width: calc(100% * 5 / 12)
+  .six
+    width: calc(100% * 6 / 12)
+  .seven
+    width: calc(100% * 7 / 12)
+  .eight
+    width: calc(100% * 8 / 12)
+  .nine
+    width: calc(100% * 9 / 12)
+  .ten
+    width: calc(100% * 10 / 12)
+  .eleven
+    width: calc(100% * 11 / 12)
+  .twelve
+    width: 100%
+
+
++below($medium)
+  .first
+    order: 1
+  .second 
+    order: 2
+  .third 
+    order: 3
+  .fourth
+    order: 4
